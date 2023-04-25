@@ -1,0 +1,14 @@
+# pipeline-1.yml
+name: Pipeline 1
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build app
+        run: ./build.sh
